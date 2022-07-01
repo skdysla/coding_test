@@ -1,5 +1,3 @@
-import java.util.*;
-
 class Solution {
     public String solution(String s, int n) {
         String result = "";
