@@ -1,2 +1,2 @@
-# programmers_coding_test
-programmers coding test
+# coding_test
+coding test
