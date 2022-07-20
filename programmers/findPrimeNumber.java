@@ -1,22 +1,22 @@
+import java.util.Arrays;
+
 class Solution {
     public int solution(int n) {
-        int count = 1;
-        boolean chk;
+        int cnt = 0;
+        int isPrime[] = new int[n+1];
+        Arrays.fill(isPrime, 1);
         
-        long num = (long)n;
-        
-        for(long i = 3; i <= num; i+=2){
-            chk = false;
-            for(int j = 2; j < i; j++){
-                if(i % j == 0){
-                    chk = true;
-                    break;
-                }
-            }
-            if(chk == false)
-                count++;
+        isPrime[0] = isPrime[1] = 0;
+        for(int i = 2; i * i <= n; i++){
+            if(isPrime[i] == 1)
+                for(int j = i * i; j <= n; j+=i)
+                    isPrime[j] = 0;
         }
         
-        return count;
+        for(int i : isPrime)
+            if(i == 1)
+                cnt++;
+        
+        return cnt;
     }
 }
