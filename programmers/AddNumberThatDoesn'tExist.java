@@ -5,7 +5,7 @@ import java.util.stream.Collectors;
 class Solution {
     public int solution(int[] numbers) {
         int answer = 0;
-        int[] nums = {1,2,3,4,5,6,7,8,9};
+        int[] nums = {1,2,3,4,5,6,7,8,9};    
         
         List<Integer> list = Arrays.stream(nums).boxed().
             collect(Collectors.toList());
